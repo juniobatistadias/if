@@ -6,11 +6,16 @@ public class IF {
         Scanner entrada = new Scanner(System.in);
         System.out.println("INFORME A MEDIA:");
         Double media = entrada.nextDouble();
-        if(media>= 7.0){
+        if(media>= 10.0 && media>=7.0){
             System.out.println("Aprovado!\n" + "parabens!");}
-        else {
-            System.out.println("reprovado");
+
+        if(media>= 7 && media>=4.5){
+            System.out.println("Aprovado!\n" + "parabens!");}
+        boolean criterioReprovacao = media <4.5 && media >= 0;
+        if(criterioReprovacao){
+            System.out.println("Reprovado!");
         }
+
         entrada.close();
     }
 }
